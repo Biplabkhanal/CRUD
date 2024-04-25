@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit, faTrash, faSave } from "@fortawesome/free-solid-svg-icons";
@@ -113,12 +113,7 @@ const Table = ({ records, onDelete, onEdit }) => {
       )}
 
       {showTable && (
-        <Link
-          to={{
-            pathname: "/profiles",
-            state: { records: records },
-          }}
-        >
+        <Link to="/profiles" state={records}>
           <button type="button" className="btn btn-success button">
             View Profile
           </button>

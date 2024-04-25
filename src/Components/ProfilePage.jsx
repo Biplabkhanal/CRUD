@@ -1,11 +1,11 @@
-// ProfilePage.jsx
-
 import React from "react";
-import { useLocation } from "react-router-dom"; // Import useLocation
+import { useLocation } from "react-router-dom";
+import "./Profile.css";
 
 const Profiles = () => {
-  const location = useLocation(); // Get location using useLocation hook
-  const { records } = location.state || {};
+  const location = useLocation();
+  const records = location.state;
+  console.log(records);
 
   // Check if records is undefined or empty
   if (!records || records.length === 0) {
@@ -14,7 +14,9 @@ const Profiles = () => {
 
   return (
     <div>
-      <h1>Profiles</h1>
+      <div id="profiles-container">
+        <h1>Profiles</h1>
+      </div>
       <table>
         <thead>
           <tr>

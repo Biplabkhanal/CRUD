@@ -122,7 +122,7 @@ const Form = ({ onSubmit }) => {
         const updatedRecords = [...records];
         updatedRecords[editableIndex] = formData;
         setRecords(updatedRecords);
-        setEditableIndex(-1); // Reset editable index
+        setEditableIndex(-1);
       } else {
         // Add form data to records if it's a new entry
         setRecords([...records, formData]);
